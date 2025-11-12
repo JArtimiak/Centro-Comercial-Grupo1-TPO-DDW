@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubrí todos los locales del Mall Costa del Sol">
+    <title>Locales - Mall Costa del Sol</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header class="main-header">
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+            <div class="container">
+                <div class="logo">
+                    <img src="img/logo.jpeg" alt="Logo Mall Costa del Sol" style="height: 100px; border-radius: 8px;">
+                </div>
+                <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">MALL</a></li>
+                    <li><a href="locales.html" class="active" aria-current="page">LOCALES</a></li>
+                    <li><a href="visitanos.html">VISITANOS</a></li>
+                    <li><a href="experiencias.html">EXPERIENCIAS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section Locales -->
+    <section class="page-hero">
+        <div class="container">
+            <h2>Nuestros Locales</h2>
+            <p>Descubrí las mejores marcas y comercios en un solo lugar</p>
+        </div>
+    </section>
+
+    <!-- Buscador de Locales -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <label for="searchLocal" class="sr-only">Buscar local</label>
+                <input 
+                    type="text" 
+                    id="searchLocal" 
+                    placeholder="Buscar por nombre de local..." 
+                    aria-label="Buscar local por nombre"
+                    autocomplete="off"
+                >
+                <button type="button" class="search-btn" aria-label="Buscar">
+                    🔍
+                </button>
+            </div>
+            <div id="searchResults" class="search-results" role="status" aria-live="polite"></div>
+        </div>
+    </section>
+
+    <!-- Categorías de Locales -->
+    <section class="categories-section">
+        <div class="container">
+            <h3>Categorías</h3>
+            <div class="categories-grid">
+                <a href="#tecnologia" class="category-card" data-category="tecnologia">
+                    <div class="category-icon">💻</div>
+                    <h4>Tecnología</h4>
+                    <p>1 Local</p>
+                </a>
+                
+                <a href="#accesorios" class="category-card" data-category="accesorios">
+                    <div class="category-icon">📱</div>
+                    <h4>Accesorios Celular</h4>
+                    <p>1 Local</p>
+                </a>
+                
+                <a href="#cafe" class="category-card" data-category="cafe">
+                    <div class="category-icon">☕</div>
+                    <h4>Café</h4>
+                    <p>1 Local</p>
+                </a>
+                
+                <a href="#zapatillas" class="category-card" data-category="zapatillas">
+                    <div class="category-icon">👟</div>
+                    <h4>Zapatillas</h4>
+                    <p>1 Local</p>
+                </a>
+                
+                <a href="#fotografia" class="category-card" data-category="fotografia">
+                    <div class="category-icon">📷</div>
+                    <h4>Fotografía</h4>
+                    <p>1 Local</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Listado de Locales -->
+    <section class="stores-section">
+        <div class="container">
+            
+            <!-- LOCAL 1: Tecnología -->
+            <div class="category-section" id="tecnologia">
+                <h3 class="category-title">💻 Tecnología</h3>
+                <div class="stores-grid" id="tech-list">
+                    <article class="store-card" data-store-name="Tech Store" data-location="Local A1">
+                        <div class="store-image">
+                            <img src="img/localTecnologia.jpeg" alt="Tech Store" loading="lazy">
+                        </div>
+                        <div class="store-info">
+                            <h4>TecnoFlex</h4>
+                            <p class="store-category">Electrónica & Gadgets</p>
+                            <p class="store-location">📍 Local A1 - Primer Piso</p>
+                            <p class="store-description">Lo último en tecnología y accesorios</p>
+                            <!-- ENLACE DEL COMPAÑERO 1 - Reemplazar el # con la URL de su página -->
+                            <a href="#" class="btn btn-secondary">Ver más</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- LOCAL 2: Accesorios para Celulares -->
+            <div class="category-section" id="accesorios">
+                <h3 class="category-title">📱 Accesorios para Celulares</h3>
+                <div class="stores-grid" id="accesorios-list">
+                    <article class="store-card" data-store-name="iCase Accesorios" data-location="Local B1">
+                        <div class="store-image">
+                            <img src="img/localAccesoriosCelular.png" alt="iCase Accesorios" loading="lazy">
+                        </div>
+                        <div class="store-info">
+                            <h4>Tech Accesorios</h4>
+                            <p class="store-category">Accesorios para Celulares</p>
+                            <p class="store-location">📍 Local B1 - Planta Baja</p>
+                            <p class="store-description">Fundas, cargadores, auriculares y más</p>
+                            <!-- ENLACE DEL COMPAÑERO 2 - Reemplazar el # con la URL de su página -->
+                            <a href="#" class="btn btn-secondary">Ver más</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- LOCAL 3: Café -->
+            <div class="category-section" id="cafe">
+                <h3 class="category-title">☕ Cafetería & Gastronomía</h3>
+                <div class="stores-grid" id="cafes-list">
+                    <article class="store-card" data-store-name="Café del Mar" data-location="Local C1">
+                        <div class="store-image">
+                            <img src="img/localCafe.jpeg" alt="Café del Mar" loading="lazy">
+                        </div>
+                        <div class="store-info">
+                            <h4>Experiencia Café</h4>
+                            <p class="store-category">Cafetería & Brunch</p>
+                            <p class="store-location">📍 Local C1 - Planta Baja</p>
+                            <p class="store-description">Café especialidad con vista al mar</p>
+                            <!-- ENLACE DEL COMPAÑERO 3 - Reemplazar el # con la URL de su página -->
+                            <a href="https://jrm-2024-alg.github.io/ExperienciaCafe-TPO-JavaScript/index.html" class="btn btn-secondary">Ver más</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- LOCAL 4: Zapatillas -->
+            <div class="category-section" id="zapatillas">
+                <h3 class="category-title">👟 Zapatillas</h3>
+                <div class="stores-grid" id="zapas-list">
+                    <article class="store-card" data-store-name="Sport Shoes" data-location="Local D1">
+                        <div class="store-image">
+                            <img src="img/localOnRunning.jpeg" alt="Sport Shoes" loading="lazy">
+                        </div>
+                        <div class="store-info">
+                            <h4>On Running</h4>
+                            <p class="store-category">Zapatillas Deportivas y Urbanas</p>
+                            <p class="store-location">📍 Local D1 - Primer Piso</p>
+                            <p class="store-description">Las mejores marcas de zapatillas</p>
+                            <!-- ENLACE DEL COMPAÑERO 4 - Reemplazar el # con la URL de su página -->
+                            <a href="#" class="btn btn-secondary">Ver más</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- LOCAL 5: Fotografía -->
+            <div class="category-section" id="fotografia">
+                <h3 class="category-title">📷 Fotografía</h3>
+                <div class="stores-grid" id="foto-list">
+                    <article class="store-card" data-store-name="Foto Express" data-location="Local E1">
+                        <div class="store-image">
+                            <img src="img/localFotografia.jpeg" alt="Foto Express" loading="lazy">
+                        </div>
+                        <div class="store-info">
+                            <h4>Inti Fotografía</h4>
+                            <p class="store-category">Fotografía y Revelado Digital</p>
+                            <p class="store-location">📍 Local E1 - Primer Piso</p>
+                            <p class="store-description">Impresión y revelado de tus mejores momentos</p>
+                            <!-- ENLACE DEL COMPAÑERO 5 - Reemplazar el # con la URL de su página -->
+                            <a href="#" class="btn btn-secondary">Ver más</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mall Costa del SOL</h3>
+                    <p>Tu destino de compras junto al mar</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Mall</a></li>
+                        <li><a href="locales.html">Locales</a></li>
+                        <li><a href="visitanos.html">Visitanos</a></li>
+                        <li><a href="experiencias.html">Experiencias</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📧 info@mallcostadelsol.com</p>
+                    <p>📞 (011) 1234-5678</p>
+                    <p>📍 Av. Costanera 1234, Mar del Plata</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mall Costa del SOL. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

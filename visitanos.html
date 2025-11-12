@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Encontrá cómo llegar al Mall Costa del Sol y ubicá tu local favorito">
+    <title>Visitanos - Mall Costa del Sol</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header class="main-header">
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+            <div class="container">
+                <div class="logo">
+                    <img src="img/logo.jpeg" alt="Logo Mall Costa del Sol" style="height: 100px; border-radius: 8px;">
+                </div>
+                <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">MALL</a></li>
+                    <li><a href="locales.html">LOCALES</a></li>
+                    <li><a href="visitanos.html" class="active" aria-current="page">VISITANOS</a></li>
+                    <li><a href="experiencias.html">EXPERIENCIAS</a></li>
+                    <li><a href="contacto.html">CONTACTO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h2>Visitanos</h2>
+            <p>Te esperamos en el corazón de la costa</p>
+        </div>
+    </section>
+
+    <!-- Información de Ubicación -->
+    <section class="location-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">📍</div>
+                    <h3>Dirección</h3>
+                    <p>Av. Costanera 1234<br>Mar del Plata, Buenos Aires</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">🕐</div>
+                    <h3>Horarios</h3>
+                    <p>Lun a Sáb: 10:00 - 22:00 hs<br>Dom y Feriados: 12:00 - 21:00 hs</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">🚗</div>
+                    <h3>Estacionamiento</h3>
+                    <p>500 cocheras disponibles<br>Primeras 2 horas gratis</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">🚌</div>
+                    <h3>Transporte Público</h3>
+                    <p>Líneas 511, 512, 221<br>Parada frente al shopping</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa Interactivo del Shopping -->
+    <section class="interactive-map-section">
+        <div class="container">
+            <h2>Mapa Interactivo del Shopping</h2>
+            <p class="section-description">Hacé clic en un local para ver su información y ubicación</p>
+            
+            <!-- Buscador de Locales para el Mapa -->
+            <div class="map-search">
+                <label for="searchMapLocal" class="sr-only">Buscar local en el mapa</label>
+                <input 
+                    type="text" 
+                    id="searchMapLocal" 
+                    placeholder="Buscar local en el mapa..." 
+                    aria-label="Buscar local en el mapa"
+                    autocomplete="off"
+                >
+                <button type="button" class="search-btn" aria-label="Buscar en mapa">
+                    🔍
+                </button>
+            </div>
+
+            <!-- Filtros por Piso -->
+            <div class="floor-selector">
+                <button class="floor-btn active" data-floor="planta-baja">Planta Baja</button>
+                <button class="floor-btn" data-floor="primer-piso">Primer Piso</button>
+            </div>
+
+            <!-- Mapa del Shopping -->
+            <div class="mall-map-container">
+                <!-- Planta Baja -->
+                <div class="floor-map active" id="planta-baja">
+                    <svg viewBox="0 0 800 600" class="mall-svg">
+                        <defs>
+                            <filter id="shadow">
+                                <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+                            </filter>
+                        </defs>
+                        
+                        <!-- Fondo del mall -->
+                        <rect x="50" y="50" width="700" height="500" fill="#FAF9F6" stroke="#2F3E46" stroke-width="2"/>
+                        
+                        <!-- Pasillo central -->
+                        <rect x="350" y="50" width="100" height="500" fill="#F7E7BE" opacity="0.5"/>
+                        
+                        <!-- Locales de Cafeterías (Zona A) -->
+                        <g class="store-marker" data-store="Experiencia Café" data-location="A1">
+                            <rect x="80" y="80" width="120" height="100" fill="#FFA94D" stroke="#2F3E46" stroke-width="2" filter="url(#shadow)" class="clickable-store"/>
+                            <text x="140" y="125" text-anchor="middle" fill="#2F3E46" font-weight="bold">A1</text>
+                            <text x="140" y="145" text-anchor="middle" fill="#2F3E46" font-size="12">Experiencia Café</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Beach Burger" data-location="A2">
+                            <rect x="80" y="200" width="120" height="100" fill="#FFA94D" stroke="#2F3E46" stroke-width="2" filter="url(#shadow)" class="clickable-store"/>
+                            <text x="140" y="245" text-anchor="middle" fill="#2F3E46" font-weight="bold">A2</text>
+                            <text x="140" y="265" text-anchor="middle" fill="#2F3E46" font-size="12">Beach Burger</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Helados Costeros" data-location="A3">
+                            <rect x="80" y="320" width="120" height="100" fill="#FFA94D" stroke="#2F3E46" stroke-width="2" filter="url(#shadow)" class="clickable-store"/>
+                            <text x="140" y="365" text-anchor="middle" fill="#2F3E46" font-weight="bold">A3</text>
+                            <text x="140" y="385" text-anchor="middle" fill="#2F3E46" font-size="12">Helados</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Smoothie Bar" data-location="A4">
+                            <rect x="80" y="440" width="120" height="100" fill="#FFA94D" stroke="#2F3E46" stroke-width="2" filter="url(#shadow)" class="clickable-store"/>
+                            <text x="140" y="485" text-anchor="middle" fill="#2F3E46" font-weight="bold">A4</text>
+                            <text x="140" y="505" text-anchor="middle" fill="#2F3E46" font-size="12">Smoothie Bar</text>
+                        </g>
+                        
+                        <!-- Locales de Accesorios (Zona D) -->
+                        <g class="store-marker" data-store="Beach Style" data-location="D1">
+                            <rect x="600" y="80" width="120" height="100" fill="#5EC6E8" stroke="#2F3E46" stroke-width="2" filter="url(#shadow)" class="clickable-store"/>
+                            <text x="660" y="125" text-anchor="middle" fill="#2F3E46" font-weight="bold">D1</text>
+                            <text x="660" y="145" text-anchor="middle" fill="#2F3E46" font-size="12">Beach Style</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Luxury Bags" data-location="D2">
+                            <rect x="600" y="200" width="120" height="100" fill="#5EC6E8" stroke="#2F3E46" stroke-width="2" filter="url(#shadow)" class="clickable-store"/>
+                            <text x="660" y="245" text-anchor="middle" fill="#2F3E46" font-weight="bold">D2</text>
+                            <text x="660" y="265" text-anchor="middle" fill="#2F3E46" font-size="12">Luxury Bags</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Sun Glasses" data-location="D3">
+                            <rect x="600" y="320" width="120" height="100" fill="#5EC6E8" stroke="#2F3E46" stroke-width="2" filter="url(#shadow)" class="clickable-store"/>
+                            <text x="660" y="365" text-anchor="middle" fill="#2F3E46" font-weight="bold">D3</text>
+                            <text x="660" y="385" text-anchor="middle" fill="#2F3E46" font-size="12">Sun Glasses</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Relojes Premium" data-location="D4">
+                            <rect x="600" y="440" width="120" height="70" fill="#5EC6E8" stroke="#2F3E46" stroke-width="2" filter="url(#shadow)" class="clickable-store"/>
+                            <text x="660" y="475" text-anchor="middle" fill="#2F3E46" font-weight="bold">D4</text>
+                            <text x="660" y="495" text-anchor="middle" fill="#2F3E46" font-size="11">Relojes</text>
+                        </g>
+                        
+                        <!-- Locales adicionales zona central -->
+                        <g class="store-marker" data-store="Joyas del Mar" data-location="D5">
+                            <rect x="220" y="80" width="110" height="90" fill="#7AB97A" stroke="#2F3E46" stroke-width="2" filter="url(#shadow)" class="clickable-store"/>
+                            <text x="275" y="120" text-anchor="middle" fill="#2F3E46" font-weight="bold">D5</text>
+                            <text x="275" y="140" text-anchor="middle" fill="#2F3E46" font-size="11">Joyas del Mar</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Coastal Perfumes" data-location="D6">
+                            <rect x="470" y="80" width="110" height="90" fill="#7AB97A" stroke="#2F3E46" stroke-width="2" filter="url(#shadow)" class="clickable-store"/>
+                            <text x="525" y="120" text-anchor="middle" fill="#2F3E46" font-weight="bold">D6</text>
+                            <text x="525" y="140" text-anchor="middle" fill="#2F3E46" font-size="10">Coastal Perfumes</text>
+                        </g>
+                        
+                        <!-- Leyenda -->
+                        <text x="400" y="30" text-anchor="middle" fill="#2F3E46" font-size="20" font-weight="bold">PLANTA BAJA</text>
+                    </svg>
+                </div>
+
+                <!-- Primer Piso -->
+                <div class="floor-map" id="primer-piso">
+                    <svg viewBox="0 0 800 600" class="mall-svg">
+                        <defs>
+                            <filter id="shadow2">
+                                <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+                            </filter>
+                        </defs>
+                        
+                        <!-- Fondo del mall -->
+                        <rect x="50" y="50" width="700" height="500" fill="#FAF9F6" stroke="#2F3E46" stroke-width="2"/>
+                        
+                        <!-- Pasillo central -->
+                        <rect x="350" y="50" width="100" height="500" fill="#F7E7BE" opacity="0.5"/>
+                        
+                        <!-- Locales de Accesorios (Zona B) -->
+                        <g class="store-marker" data-store="Tech Accesorios" data-location="B1">
+                            <rect x="80" y="80" width="120" height="120" fill="#F4A261" stroke="#2F3E46" stroke-width="2" filter="url(#shadow2)" class="clickable-store"/>
+                            <text x="140" y="135" text-anchor="middle" fill="#2F3E46" font-weight="bold">B1</text>
+                            <text x="140" y="155" text-anchor="middle" fill="#2F3E46" font-size="12">Tech Accesorios</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Inti Fotografía" data-location="B2">
+                            <rect x="80" y="220" width="120" height="120" fill="#F4A261" stroke="#2F3E46" stroke-width="2" filter="url(#shadow2)" class="clickable-store"/>
+                            <text x="140" y="275" text-anchor="middle" fill="#2F3E46" font-weight="bold">B2</text>
+                            <text x="140" y="295" text-anchor="middle" fill="#2F3E46" font-size="11">Inti Fotografía</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Studio Photo" data-location="B3">
+                            <rect x="80" y="360" width="120" height="120" fill="#F4A261" stroke="#2F3E46" stroke-width="2" filter="url(#shadow2)" class="clickable-store"/>
+                            <text x="140" y="415" text-anchor="middle" fill="#2F3E46" font-weight="bold">B3</text>
+                            <text x="140" y="435" text-anchor="middle" fill="#2F3E46" font-size="12">Studio Photo</text>
+                        </g>
+                        
+                        <!-- Locales de Tecnología (Zona C) -->
+                        <g class="store-marker" data-store="TecnoFlex" data-location="C1">
+                            <rect x="220" y="80" width="110" height="110" fill="#F7E7BE" stroke="#2F3E46" stroke-width="2" filter="url(#shadow2)" class="clickable-store"/>
+                            <text x="275" y="130" text-anchor="middle" fill="#2F3E46" font-weight="bold">C1</text>
+                            <text x="275" y="150" text-anchor="middle" fill="#2F3E46" font-size="12">TecnoFlex</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Apple Zone" data-location="C2">
+                            <rect x="220" y="210" width="110" height="110" fill="#F7E7BE" stroke="#2F3E46" stroke-width="2" filter="url(#shadow2)" class="clickable-store"/>
+                            <text x="275" y="260" text-anchor="middle" fill="#2F3E46" font-weight="bold">C2</text>
+                            <text x="275" y="280" text-anchor="middle" fill="#2F3E46" font-size="12">Apple Zone</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Gaming Pro" data-location="C3">
+                            <rect x="220" y="340" width="110" height="110" fill="#F7E7BE" stroke="#2F3E46" stroke-width="2" filter="url(#shadow2)" class="clickable-store"/>
+                            <text x="275" y="390" text-anchor="middle" fill="#2F3E46" font-weight="bold">C3</text>
+                            <text x="275" y="410" text-anchor="middle" fill="#2F3E46" font-size="12">Gaming Pro</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Mobile World" data-location="C4">
+                            <rect x="470" y="80" width="110" height="110" fill="#F7E7BE" stroke="#2F3E46" stroke-width="2" filter="url(#shadow2)" class="clickable-store"/>
+                            <text x="525" y="130" text-anchor="middle" fill="#2F3E46" font-weight="bold">C4</text>
+                            <text x="525" y="150" text-anchor="middle" fill="#2F3E46" font-size="11">Mobile World</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="PC Master" data-location="C5">
+                            <rect x="470" y="210" width="110" height="110" fill="#F7E7BE" stroke="#2F3E46" stroke-width="2" filter="url(#shadow2)" class="clickable-store"/>
+                            <text x="525" y="260" text-anchor="middle" fill="#2F3E46" font-weight="bold">C5</text>
+                            <text x="525" y="280" text-anchor="middle" fill="#2F3E46" font-size="12">PC Master</text>
+                        </g>
+                        
+                        <!-- Locales de Zapas (Zona E) -->
+                        <g class="store-marker" data-store="On Running" data-location="E1">
+                            <rect x="600" y="80" width="120" height="110" fill="#7AB97A" stroke="#2F3E46" stroke-width="2" filter="url(#shadow2)" class="clickable-store"/>
+                            <text x="660" y="130" text-anchor="middle" fill="#2F3E46" font-weight="bold">E1</text>
+                            <text x="660" y="150" text-anchor="middle" fill="#2F3E46" font-size="12">On Running</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Adidas Original" data-location="E2">
+                            <rect x="600" y="210" width="120" height="110" fill="#7AB97A" stroke="#2F3E46" stroke-width="2" filter="url(#shadow2)" class="clickable-store"/>
+                            <text x="660" y="260" text-anchor="middle" fill="#2F3E46" font-weight="bold">E2</text>
+                            <text x="660" y="280" text-anchor="middle" fill="#2F3E46" font-size="11">Adidas Original</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Puma Zone" data-location="E3">
+                            <rect x="600" y="340" width="120" height="100" fill="#7AB97A" stroke="#2F3E46" stroke-width="2" filter="url(#shadow2)" class="clickable-store"/>
+                            <text x="660" y="385" text-anchor="middle" fill="#2F3E46" font-weight="bold">E3</text>
+                            <text x="660" y="405" text-anchor="middle" fill="#2F3E46" font-size="12">Puma Zone</text>
+                        </g>
+                        
+                        <g class="store-marker" data-store="Sneakers Point" data-location="E4">
+                            <rect x="470" y="340" width="110" height="140" fill="#7AB97A" stroke="#2F3E46" stroke-width="2" filter="url(#shadow2)" class="clickable-store"/>
+                            <text x="525" y="400" text-anchor="middle" fill="#2F3E46" font-weight="bold">E4</text>
+                            <text x="525" y="420" text-anchor="middle" fill="#2F3E46" font-size="11">Sneakers Point</text>
+                        </g>
+                        
+                        <!-- Leyenda -->
+                        <text x="400" y="30" text-anchor="middle" fill="#2F3E46" font-size="20" font-weight="bold">PRIMER PISO</text>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Información del Local Seleccionado -->
+            <div id="storeInfoPanel" class="store-info-panel hidden">
+                <button class="close-btn" aria-label="Cerrar información">&times;</button>
+                <h3 id="storeInfoName"></h3>
+                <p id="storeInfoLocation"></p>
+                <p id="storeInfoCategory"></p>
+                <a id="storeInfoLink" href="#" class="btn btn-primary">Ver detalles del local</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Llegar -->
+    <section class="directions-section">
+        <div class="container">
+            <h2>Cómo Llegar</h2>
+            
+            <div class="directions-grid">
+                <div class="direction-card">
+                    <h3>🚗 En Auto</h3>
+                    <ul>
+                        <li>Desde Buenos Aires: Autopista 2, salida Mar del Plata</li>
+                        <li>Por Av. Constitución hasta Av. Costanera</li>
+                        <li>Estacionamiento gratuito las primeras 2 horas</li>
+                    </ul>
+                </div>
+                
+                <div class="direction-card">
+                    <h3>🚌 En Colectivo</h3>
+                    <ul>
+                        <li>Líneas: 511, 512, 221</li>
+                        <li>Parada: frente al shopping</li>
+                        <li>Frecuencia: cada 15 minutos</li>
+                    </ul>
+                </div>
+                
+                <div class="direction-card">
+                    <h3>🚕 En Taxi/Uber</h3>
+                    <ul>
+                        <li>Parada de taxis sobre Av. Costanera</li>
+                        <li>Punto de encuentro Uber: Entrada principal</li>
+                        <li>Disponible 24/7</li>
+                    </ul>
+                </div>
+                
+                <div class="direction-card">
+                    <h3>♿ Accesibilidad</h3>
+                    <ul>
+                        <li>Rampas en todas las entradas</li>
+                        <li>Ascensores amplios</li>
+                        <li>Estacionamiento exclusivo</li>
+                        <li>Baños adaptados</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mall Costa del SOL</h3>
+                    <p>Tu destino de compras junto al mar</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="index.html">Mall</a></li>
+                        <li><a href="locales.html">Locales</a></li>
+                        <li><a href="visitanos.html">Visitanos</a></li>
+                        <li><a href="experiencias.html">Experiencias</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>📧 info@mallcostadelsol.com</p>
+                    <p>📞 (011) 1234-5678</p>
+                    <p>📍 Av. Costanera 1234, Mar del Plata</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mall Costa del SOL. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
