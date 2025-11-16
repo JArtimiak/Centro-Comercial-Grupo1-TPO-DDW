@@ -1,11 +1,5 @@
-/* ======================================
-   MALL COSTA DEL SOL - ESTILOS GLOBALES
-   Shopping temático inspirado en la costa atlántica
-   ====================================== */
-
-/* === VARIABLES CSS === */
+/* Paleta de Colores */
 :root {
-    /* Paleta de Colores */
     --color-sol: #FFA94D;
     --color-mar: #5EC6E8;
     --color-arena: #F7E7BE;
@@ -14,36 +8,30 @@
     --color-fondo: #FAF9F6;
     --color-verde: #7AB97A;
     
-    /* Colores adicionales */
     --color-blanco: #FFFFFF;
     --color-gris-claro: #E8E8E8;
     --color-gris: #A8A8A8;
     --color-negro: #1A1A1A;
-    
-    /* Tipografía */
+
     --font-principal: 'Helvetica Neue', Arial, sans-serif;
     
-    /* Espaciado */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 3rem;
     --spacing-xl: 4rem;
     
-    /* Bordes */
     --border-radius: 8px;
     --border-radius-lg: 16px;
     
-    /* Sombras */
     --shadow-sm: 0 2px 4px rgba(47, 62, 70, 0.1);
     --shadow-md: 0 4px 8px rgba(47, 62, 70, 0.15);
     --shadow-lg: 0 8px 16px rgba(47, 62, 70, 0.2);
     
-    /* Transiciones */
     --transition: all 0.3s ease;
 }
 
-/* === RESET Y BASE === */
+
 * {
     margin: 0;
     padding: 0;
@@ -79,7 +67,6 @@ ul {
     list-style: none;
 }
 
-/* === UTILIDADES === */
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -102,7 +89,6 @@ ul {
     display: none !important;
 }
 
-/* === HEADER Y NAVEGACIÓN === */
 .main-header {
     background-color: var(--color-blanco);
     box-shadow: var(--shadow-md);
@@ -123,7 +109,7 @@ ul {
 
 .logo img {
     height: 240px;
-    max-height: 20vh;  /* opcional */
+    max-height: 20vh;  
     border-radius: 8px;
     transition: height 0.3s ease;
 }
@@ -178,7 +164,6 @@ ul {
     color: var(--color-blanco);
 }
 
-/* === HERO SECTION === */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -229,7 +214,6 @@ ul {
     object-fit: cover;
 }
 
-/* === PAGE HERO === */
 .page-hero {
     background: linear-gradient(135deg, var(--color-mar) 0%, var(--color-sol) 100%);
     color: var(--color-blanco);
@@ -248,7 +232,6 @@ ul {
     opacity: 0.95;
 }
 
-/* === BOTONES === */
 .btn {
     display: inline-block;
     padding: 0.875rem 2rem;
@@ -293,7 +276,6 @@ ul {
     font-size: 1.1rem;
 }
 
-/* === SECCIONES === */
 .featured-section,
 .hours-section,
 .stores-section,
@@ -328,7 +310,6 @@ ul {
     margin-right: auto;
 }
 
-/* === CARDS === */
 .features-grid,
 .categories-grid,
 .stores-grid,
@@ -367,7 +348,7 @@ ul {
 }
 
 .feature-icon {
-    width: 100%; /* ocupa todo el ancho del contenedor padre */
+    width: 100%; 
     margin-bottom: var(--spacing-sm);
     overflow: hidden;
 }
@@ -376,7 +357,7 @@ ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 12px; /* opcional si querés bordes redondeados */
+    border-radius: 12px;
 }
 
 .category-icon,
@@ -417,7 +398,6 @@ ul {
     content: " →";
 }
 
-/* === CATEGORÍAS === */
 .categories-grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
@@ -432,7 +412,6 @@ ul {
     margin-bottom: var(--spacing-sm);
 }
 
-/* === LOCALES / STORES === */
 .stores-grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
@@ -449,12 +428,12 @@ ul {
     padding-left: var(--spacing-sm);
     display: flex;
     align-items: center;
-    gap: 10px; /* separación entre imagen y texto */
+    gap: 10px;
 }
 
 
 .category-title img {
-    height: 40px; /* tamaño que vos quieras */
+    height: 40px; 
     width: auto;
 }
 
@@ -502,7 +481,7 @@ ul {
     margin-bottom: var(--spacing-sm);
     display: inline-flex;
     align-items: center;
-    gap: 6px; /* espacio entre icono y texto */
+    gap: 6px; 
 }
 
 .store-description {
@@ -510,7 +489,6 @@ ul {
     margin-bottom: var(--spacing-md);
 }
 
-/* === BUSCADOR === */
 .search-section {
     background-color: var(--color-blanco);
     padding: var(--spacing-md) 0;
@@ -584,7 +562,6 @@ ul {
     border-left-color: var(--color-sol);
 }
 
-/* === MAPA INTERACTIVO === */
 .mall-map-container {
     background-color: var(--color-blanco);
     border-radius: var(--border-radius-lg);
@@ -684,7 +661,6 @@ ul {
     color: var(--color-texto);
 }
 
-/* === INFO GRID === */
 .info-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
@@ -693,7 +669,6 @@ ul {
     text-align: center;
 }
 
-/* === DIRECCIONES === */
 .directions-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -724,7 +699,6 @@ ul {
     color: var(--color-gris);
 }
 
-/* === EXPERIENCIAS === */
 .experiences-grid {
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
@@ -799,7 +773,6 @@ ul {
     color: var(--color-gris);
 }
 
-/* === CALENDARIO === */
 .calendar-grid {
     display: grid;
     gap: var(--spacing-md);
@@ -863,7 +836,6 @@ ul {
     font-size: 0.9rem;
 }
 
-/* === SERVICIOS === */
 .services-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
@@ -890,7 +862,6 @@ ul {
     margin-top: var(--spacing-sm);
 }
 
-/* === NEWSLETTER === */
 .newsletter-section {
     background: linear-gradient(135deg, var(--color-mar) 0%, var(--color-verde) 100%);
     padding: var(--spacing-xl) 0;
@@ -932,7 +903,6 @@ ul {
     border: none;
 }
 
-/* === CONTACTO === */
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1103,7 +1073,6 @@ ul {
     transform: translateX(5px);
 }
 
-/* === FAQ === */
 .faq-container {
     max-width: 800px;
     margin: var(--spacing-md) auto 0;
@@ -1163,7 +1132,6 @@ ul {
     max-height: 500px;
 }
 
-/* === HORARIOS === */
 .hours-section {
     background-color: var(--color-arena);
     text-align: center;
@@ -1189,7 +1157,6 @@ ul {
     color: var(--color-mar);
 }
 
-/* === FOOTER === */
 .main-footer {
     background-color: var(--color-texto);
     color: var(--color-blanco);
@@ -1287,9 +1254,8 @@ ul {
     vertical-align: middle;
 }
 
-/* === RESPONSIVE === */
+/* RESPONSIVE */
 
-/* Tablets */
 @media (max-width: 768px) {
     .hero {
         grid-template-columns: 1fr;
@@ -1349,7 +1315,6 @@ ul {
     }
 }
 
-/* Móviles */
 @media (max-width: 480px) {
     :root {
         font-size: 14px;
@@ -1376,8 +1341,8 @@ ul {
 
     .stores-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* ← 2 por fila */
-    gap: 20px; /* espacio entre tarjetas */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px; 
 }
 
     .info-grid,
@@ -1397,7 +1362,6 @@ ul {
     }
 }
 
-/* Impresión */
 @media print {
     .main-header,
     .main-footer,
