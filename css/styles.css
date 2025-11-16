@@ -234,8 +234,8 @@ ul {
     background: linear-gradient(135deg, var(--color-mar) 0%, var(--color-sol) 100%);
     color: var(--color-blanco);
     text-align: center;
-    padding: var(--spacing-xl) 0;
-    margin-bottom: var(--spacing-lg);
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .page-hero h2 {

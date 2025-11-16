@@ -114,7 +114,7 @@ function displaySearchResults(matches, container) {
             <div class="search-result-item" data-store-name="${store.name}" data-location="${store.location}">
                 <h4 style="margin-bottom: 0.25rem; color: #2F3E46;">${store.name}</h4>
                 <p style="margin-bottom: 0.25rem; color: #5EC6E8; font-size: 0.9rem;">${store.description}</p>
-                <p style="color: #A8A8A8; font-size: 0.85rem;">📍 Local ${store.location} - ${store.floor === 'planta-baja' ? 'Planta Baja' : 'Primer Piso'}</p>
+                <p style="color: #A8A8A8; font-size: 0.85rem;"><img class="icono-locales-ubicacion" src="img/icono-contacto-mapa.png" alt="mapa-local"> Local ${store.location} - ${store.floor === 'planta-baja' ? 'Planta Baja' : 'Primer Piso'}</p>
             </div>
         `;
     });
