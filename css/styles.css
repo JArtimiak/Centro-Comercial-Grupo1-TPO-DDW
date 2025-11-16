@@ -1233,6 +1233,19 @@ ul {
     font-size: 0.9rem;
 }
 
+.footer-contacto {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.icono-contacto {
+    width: 24px;  
+    height: auto;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
 /* === RESPONSIVE === */
 
 /* Tablets */
