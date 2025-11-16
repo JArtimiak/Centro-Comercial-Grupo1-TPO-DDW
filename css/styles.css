@@ -368,9 +368,10 @@ ul {
 .feature-icon,
 .category-icon,
 .info-icon {
-    font-size: 3rem;
-    margin-bottom: var(--spacing-sm);
+    width: 100px;
+    height: 100px;
 }
+
 
 .feature-card h3,
 .category-card h4,
