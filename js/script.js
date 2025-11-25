@@ -52,12 +52,81 @@ function initMobileMenu() {
 
 // ============= DATOS DE LOCALES =============
 const storesData = [
-    { name: 'Tech Store', category: 'tecnologia', location: 'A1', floor: 'primer-piso', description: 'Electrónica y gadgets' },
-    { name: 'iCase Accesorios', category: 'accesorios', location: 'B1', floor: 'planta-baja', description: 'Accesorios para celulares' },
-    { name: 'Café del Mar', category: 'cafe', location: 'C1', floor: 'planta-baja', description: 'Café especialidad con vista al mar' },
-    { name: 'Sport Shoes', category: 'zapatillas', location: 'D1', floor: 'primer-piso', description: 'Zapatillas deportivas y urbanas' },
-    { name: 'Foto Express', category: 'fotografia', location: 'E1', floor: 'primer-piso', description: 'Fotografía y revelado digital' }
+    // ======== Locales propios ========
+    {
+        name: 'On Running',
+        category: 'zapatillas',
+        location: 'E1',
+        floor: 'primer-piso',
+        description: 'Zapatillas técnicas y urbanas de alto rendimiento.'
+    },
+    {
+        name: 'Experiencia Café',
+        category: 'cafe',
+        location: 'A1',
+        floor: 'planta-baja',
+        description: 'Café de especialidad y experiencias sensoriales.'
+    },
+    {
+        name: 'Inti Fotografía',
+        category: 'fotografia',
+        location: 'B2',
+        floor: 'primer-piso',
+        description: 'Estudio fotográfico, revelado y productos profesionales.'
+    },
+    {
+        name: 'Tech Accesorios',
+        category: 'accesorios',
+        location: 'B1',
+        floor: 'planta-baja',
+        description: 'Accesorios para celulares, notebooks y dispositivos.'
+    },
+    {
+        name: 'TecnoFlex',
+        category: 'tecnologia',
+        location: 'C1',
+        floor: 'primer-piso',
+        description: 'Tecnología flexible para oficina, gaming y hogar.'
+    },
+
+    // ======== LOCALES inventados ========
+    { 
+        name: 'Tech Store', 
+        category: 'tecnologia', 
+        location: 'A1', 
+        floor: 'primer-piso', 
+        description: 'Electrónica y gadgets.'
+    },
+    { 
+        name: 'iCase Accesorios', 
+        category: 'accesorios', 
+        location: 'B1', 
+        floor: 'planta-baja', 
+        description: 'Accesorios para celulares.'
+    },
+    { 
+        name: 'Café del Mar', 
+        category: 'cafe', 
+        location: 'C1', 
+        floor: 'planta-baja', 
+        description: 'Café especialidad con vista al mar.'
+    },
+    { 
+        name: 'Sport Shoes', 
+        category: 'zapatillas', 
+        location: 'D1', 
+        floor: 'primer-piso', 
+        description: 'Zapatillas deportivas y urbanas.'
+    },
+    { 
+        name: 'Foto Express', 
+        category: 'fotografia', 
+        location: 'E1', 
+        floor: 'primer-piso', 
+        description: 'Fotografía y revelado digital.'
+    }
 ];
+
 
 // ============= BUSCADOR DE LOCALES =============
 function initStoreSearch() {
@@ -533,3 +602,4 @@ categoryCards.forEach(card => {
 console.log('🏖️ Mall Costa del Sol - Sistema inicializado');
 console.log(`📊 Total de locales: ${storesData.length}`);
 console.log('✅ Todas las funcionalidades cargadas correctamente');
+
